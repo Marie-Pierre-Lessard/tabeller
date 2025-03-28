@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- This is a reference file provided by the school for the assignment (probably for slow typists/cut and paste). -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Table Element</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+        html {
+            font-family: 'Roboto', Arial, Helvetica, sans-serif;
+        }
+
+        th,
+        td {
+            border: 1px solid grey;
+        }    
+        
+        tr:first-of-type {
+            line-height: 3rem;
+        }    
+        tr:last-of-type {
+            line-height: 1.2rem;
+        }
+
+        td {
+            padding-inline: .3rem;
+        }
+        
+        h1,
+        h2 {
+            padding-inline: 2.5rem;
+            font-weight: 400;
+        }
+        
+        sup {
+            text-transform: uppercase;
+            font-size: .8rem;
+        } 
+        
+        h1 {
+            text-align: left;
+        }
+
+        h2 {
+            text-align: right;
+        }
+        
+        .span {
+            vertical-align: top;
+        }    
+
+        .salmon {
+            background-color: salmon;
+        }
+
+        .yellowish-orange {
+            background-color: rgb(248, 188, 78);
+        }    
+    </style>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <th colspan="6" class="salmon"><h1>Marie-Pierres Schema</h1></th>
+            </tr>
+            <!-- 
+                <tr>
+                    <td>Tidspunkt:</td>
+                    <td>Mandag</td>
+                    <td>tirsdag</td>
+                    <td>Onsdag</td>
+                    <td>torsdag</td>
+                    <td>Fredag</td>
+                </tr>
+             -->
+            <!-- ROW 1 -->
+            <tr>
+                <td class="salmon">08.00 - 09.00</td>
+                <td rowspan="2" class="span yellowish-orange">JavaScript</td>
+                <td rowspan="2" class="span yellowish-orange">HTML/CSS</td>
+                <td class="yellowish-orange">Grafik</td>
+                <td class="yellowish-orange">Gymnastik</td>
+                <td rowspan="3" class="span yellowish-orange">HTML/CSS</td>
+            </tr>
+            <!-- ROW 2 -->
+            <tr>
+                <td class="salmon" class="yellowish-orange">09.00 - 10.00</td>
+                <td rowspan="2" class="span yellowish-orange">HTML/CSS</td>
+                <td class="yellowish-orange">JavaScript</td>
+            </tr>
+            <!-- ROW 3 -->
+            <tr>
+                <td class="salmon">10.00 - 12.00</td>
+                <td class="yellowish-orange">Matematik</td>
+                <td class="yellowish-orange">Gymnastik</td>
+                <td class="yellowish-orange">Dansk</td>
+            </tr>
+            <!-- ROW 4 -->
+            <tr>
+                <td class="salmon">12.00 - 12.30</td>
+                <td class="yellowish-orange">Frokost</td>
+                <td class="yellowish-orange">Frokost</td>
+                <td class="yellowish-orange">Frokost</td>
+                <td class="yellowish-orange">Frokost</td>
+                <td class="yellowish-orange">Frokost</td>
+            </tr>
+            <!-- ROW 5 -->
+            <tr>
+                <td class="salmon">12.30 - 13.30</td>
+                <td rowspan="2" class="span yellowish-orange">HTML/CSS</td>
+                <td rowspan="2" class="span yellowish-orange">Javascript</td>
+                <td class="yellowish-orange">Javascript</td>
+                <td class="yellowish-orange">HTML/CSS</td>
+                <td rowspan="2" class="span yellowish-orange">JavaScript</td>
+            </tr>
+            <!-- ROW 6 -->
+            <tr>
+                <td class="salmon">13.30 - 14.30</td>
+                <td class="yellowish-orange">HTML/CSS</td>
+                <td class="yellowish-orange">Javascript</td>
+            </tr>
+            <!-- ROW 7 -->
+            <tr>
+                <td colspan="6" class="salmon"><h2>SchemaWizard 2022<sup>tm</sup></h2></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

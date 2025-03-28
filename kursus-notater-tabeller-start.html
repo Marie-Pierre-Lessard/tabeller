@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- COURSE NOTES/KURSUSNOTATER -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabeller</title>
+    <style>
+        table,
+        tr,
+        td,
+        th {
+            /* Transparent black (looks grey): #00000022 or #00000033 ; the transparency comes from the last two digits, I think */
+            background-color: #00000022;
+            color: #fff;
+            /* The padding has a color by default, which creates the lines between each cell. */
+            padding: .3rem;
+            /* The border property needs at least 3 values to work. */
+            border: 1px solid #000;
+            /* By default, text is centered vertically, probably because of a default line height that matches the height of the cell. To get text positioned from the top left corner: vertical-align: top; */
+            vertical-align: top;
+        }
+        
+        div {
+            /* Transparent color */
+            background-color: #ee443333;
+        }
+
+        .pink {
+            background-color: deeppink;
+        }
+
+        #pink {
+            background-color: fuchsia;
+        }
+
+        table tr:nth-child(3) + tr td:last-of-type {
+            background-color: aqua;
+        }
+
+        /* The following pseudo-elements override the background color of the div above. */
+        table tr:nth-child(2) td:first-of-type {
+            background-color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <!-- GLOBAL HEADER -->
+    <header>
+        <h1>Tabeller i HTML</h1>
+    </header>
+    <main>
+        <section>
+
+            <h2>Tabel nr. 1</h2>
+            <ol>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+                <li><a href="#">Item</a></li>
+            </ol>
+            <table>
+                <!-- th = table header; tr = table row; td = table data (cell) 
+                 A single td does not fill the entire width of the page. It's not like grids. By default, the cell is the same width as the content. -->
+                <!-- The table heading could also have 6 cells -->
+                <th colspan="6" class="pink">Table heading</th>
+                <!-- ROW 1 (it is easy to lose track of where one is, so it is smart to mark the various parts of the table with comments) -->
+                <tr>
+                    <!-- rowspan="3" : the 1st cells of 3 rows get merged; if you forget or omit to delete the corresponding cells in the next rows, they do get displayed, and it creates a hole an the right end of the table.  -->
+                    <td rowspan="3">Col 1, row 1
+                        <div>Div 1</div>
+                        <div>Div 2</div>
+                    </td>
+                    <td>Col 2, row 1</td>
+                    <td>Col 3, row 1</td>
+                    <td>Col 4, row 1</td>
+                    <td>Col 5, row 1</td>
+                    <td>Col 6, row 1</td>
+                </tr>
+                <!-- ROW 2 (notater forhøjer karakterer; we need to learn to work with others; these notes can be the "huskesedler" that one writes to oneself before starting on the coding, i.e. the structure/goals to each. ) -->
+                <tr>
+                    <td>Col 2, row 2</td>
+                    <td>Col 3, row 2</td>
+                    <td>Col 4, row 2</td>
+                    <td>Col 5, row 2</td>
+                    <td>Col 6, row 2</td>
+                </tr>
+                <!-- ROW 3 -->
+                <tr>
+                    <td>Col 2, row 3</td>
+                    <td>Col 3, row 3</td>
+                    <td>Col 4, row 3</td>
+                    <!-- Since the ID has a higher specificity, this cell becomes fuchsia, not pink! (The CSS declaration for the ID is fuchsia, the class is pink.) The background color of the element td is also overriden. -->
+                    <td id="pink" class="pink">Col 5, row 3</td>
+                    <td>Col 6, row 3</td>
+                </tr>
+        </section>
+        <article>
+            <header><h2>Artikel</h2></header>
+
+        </article>
+
+        </table>
+    </main>
+    <!-- GLOBAL FOOTER -->
+    <footer>
+
+    </footer>
+</body>
+</html>
